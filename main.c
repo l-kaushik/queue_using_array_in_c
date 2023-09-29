@@ -42,6 +42,27 @@ void enqueue(Queue *q, int value){
 	}
 }
 
+int isEmpty(Queue *q){
+	if(q->rear == q->front){
+		return 1;
+	}
+	return 0;
+}
+
+int dequeue(Queue *q){
+	int status = -1;	// return signal
+	if(isEmpty(q)){
+		printf("Queue underflow\n");
+	}
+	else{
+		q->front++;
+		status = q->arr[q->front];
+	}
+	return status;
+
+	// on failure returns -1 else return the dequeued value
+	// warning: if dequeued value is -1 and you checking for dequeue status then it may cause some error
+}
 
 int main()
 {
