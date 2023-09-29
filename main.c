@@ -69,16 +69,24 @@ void display(Queue *q){
 		printf("Queue underflow\n");
 		return ;
 	}
-	for (int i = 0; i<q->size; i++){
+	for (int i = q->front + 1; i<q->size; i++){
 		printf("%d\t",q->arr[i]);
 	}
 }
 
 int main()
 {
-	Queue *q = initializeQueue(1);
+	Queue *q = initializeQueue(5);
 	enqueue(q, 4);
-	printf("%d",isEmpty(q));
-	printf("%d",isFull(q));
+	enqueue(q, 2);
+	enqueue(q, 1);
+	enqueue(q, 3);
+	enqueue(q, 5);
+	display(q);
+	printf("\n");
+	dequeue(q);
+	dequeue(q);
+	dequeue(q);
+	display(q);
 	return 0;
 }
