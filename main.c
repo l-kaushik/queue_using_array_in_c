@@ -18,7 +18,7 @@ void checkNull(void *ptr){
 Queue * initializeQueue(int size){
 	Queue *q = malloc(sizeof(Queue));
 	checkNull(q);
-	q->size = 10;
+	q->size = size;
 	q->front = q->rear = -1;
 	q->arr = (int *)malloc(q->size * sizeof(int));
 	checkNull(q->arr);
@@ -76,6 +76,9 @@ void display(Queue *q){
 
 int main()
 {
-	Queue *q = initializeQueue(10);
+	Queue *q = initializeQueue(1);
+	enqueue(q, 4);
+	printf("%d",isEmpty(q));
+	printf("%d",isFull(q));
 	return 0;
 }
