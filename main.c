@@ -26,6 +26,12 @@ Queue * initializeQueue(int size){
 	return q;
 }
 
+int isFull(Queue *q){
+	if(q->rear == q->size-1)
+		return 1;
+	return 0;
+}
+
 void enqueue(Queue *q, int value){
 	if(isFull(q)){
 		printf("Queue overflow\n");
@@ -35,6 +41,7 @@ void enqueue(Queue *q, int value){
 		q->arr[q->rear] = value;
 	}
 }
+
 
 int main()
 {
