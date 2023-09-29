@@ -1,7 +1,15 @@
 #include<stdio.h>
 
+typedef struct {
+	int size;
+	int front;
+	int back;	
+	int *arr;
+}Queue;
+
+
 int main()
 {
-	printf("Hello World");
+	
 	return 0;
 }
