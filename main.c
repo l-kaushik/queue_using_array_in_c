@@ -64,6 +64,16 @@ int dequeue(Queue *q){
 	// warning: if dequeued value is -1 and you checking for dequeue status then it may cause some error
 }
 
+void display(Queue *q){
+	if(isEmpty(q)){
+		printf("Queue underflow\n");
+		return ;
+	}
+	for (int i = 0; i<q->size; i++){
+		printf("%d\t",q->arr[i]);
+	}
+}
+
 int main()
 {
 	Queue *q = initializeQueue(10);
