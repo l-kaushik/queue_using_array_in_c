@@ -15,7 +15,7 @@ void checkNull(void *ptr){
 	}
 }
 
-Queue * initializeQueue(Queue *ptr, int size){
+Queue * initializeQueue(int size){
 	Queue *q = malloc(sizeof(Queue));
 	checkNull(q);
 	q->size = 10;
@@ -28,6 +28,5 @@ Queue * initializeQueue(Queue *ptr, int size){
 
 int main()
 {
-
 	return 0;
 }
