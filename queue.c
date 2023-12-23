@@ -61,7 +61,7 @@ void display(Queue *q){
 		printf("Queue underflow\n");
 		return ;
 	}
-	for (int i = q->front + 1; i<q->size; i++){
+	for (int i = q->front + 1; i<=q->rear; i++){
 		printf("%d\t",q->arr[i]);
 	}
 }
